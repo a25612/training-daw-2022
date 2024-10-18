@@ -1,4 +1,4 @@
-'use strict'
+const assert = require('assert').strict;
 
 var x = 10
 var test = 5
