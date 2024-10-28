@@ -1,24 +1,28 @@
-  // Seleccionar todos los elementos h2
-  const h2Elements = getElemetsByClassName ('h2');
-
+window.onload = function (e) {
   // 1. Modificar el contenido con innerHTML
-  h2Elements[1].innerHTML = 'Contenido modificado con <b>innerHTML';
+  document.getElementsByTagName('h2')[1].innerHTML = 'Contenido modificado con innerHTML';
 
-  // 2. Modificar el contenido con innerText
-  h2Elements[1].innerText = 'Contenido modificado con innerText';
+  //2.Seleccionar el elemento con id == username
+  let button = document.getElementById('username');
+  console.log(button);
 
-  // 3. Obtener los hijos del nodo 'header' con children
-  const header = document.querySelector('header');
-  console.log(header.children); // Muestra los hijos directos de <header>
+  //3.Cambiar el color de todos los .first que estén dentro de un artículo
+  const allFirst = document.querySelectorAll('article.first')
+  for (let item of allFirst) {
+    item.style['background-color'] = '#00ccff'
+  }
 
-  // 4. Obtener el número de elementos hijos de 'header' con childElementCount
-  console.log(header.childElementCount); // Muestra la cantidad de hijos en <header>
+  //4.Seleccionar todos lo elementos li con class == item
+  const allLi = document.querySelectorAll('li.item')
+  for (let item of allLi){
+    console.log(item);
+  }
 
-  // 5. Modificar el atributo 'id' del segundo h2
-  h2Elements[1].id = 'nuevoIdH2';
-  console.log(h2Elements[1].id); // Imprime el nuevo id del segundo h2
+  //5.Seleccionar todos los buttons dentro de class == buttons
+  const allButtons = document.querySelectorAll('buttons button')
 
-  // 6. Modificar el estilo del segundo h2 (color, tamaño de fuente, peso de fuente)
-  h2Elements[1].style.color = 'blue';  // Cambia el color del texto a azul
-  h2Elements[1].style.fontSize = '30px';  // Cambia el tamaño de la fuente
-  h2Elements[1].style.fontWeight = 'bold';  // Cambia el peso de la fuente a negrita    
+  //6.Cambiar el codigo de fondo del primer parrafo
+  document.querySelectorAll('p')[0].style['background-color'] = 'pink';
+
+
+}
